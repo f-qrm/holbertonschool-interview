@@ -45,8 +45,8 @@ def main():
             if line_count % 10 == 0:
                 print_stats(total_size, status_counts)
 
-        # EOF : afficher les lignes restantes si le dernier bloc < 10
-        if line_count % 10 != 0:
+        # EOF : afficher si fichier vide ou si le dernier bloc < 10
+        if line_count == 0 or line_count % 10 != 0:
             print_stats(total_size, status_counts)
 
     except KeyboardInterrupt:
