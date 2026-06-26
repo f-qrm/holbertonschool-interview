@@ -45,6 +45,10 @@ def main():
             if line_count % 10 == 0:
                 print_stats(total_size, status_counts)
 
+        # EOF : afficher les lignes restantes si le dernier bloc < 10
+        if line_count % 10 != 0:
+            print_stats(total_size, status_counts)
+
     except KeyboardInterrupt:
         # Afficher les stats au CTRL+C, puis laisser l'exception remonter
         print_stats(total_size, status_counts)
