@@ -15,7 +15,8 @@ def minOperations(n):
 
     Pourquoi ? Chaque fois qu'on fait un "Copy All" puis p-1 "Paste",
     on multiplie le nombre de H par p. Ça coûte exactement p opérations.
-    Donc trouver la meilleure séquence revient à factoriser n en facteurs premiers.
+    Donc trouver la meilleure séquence revient à factoriser n
+    en facteurs premiers.
     """
     if n <= 1:
         # Impossible d'avoir 0 ou 1 H (on commence déjà avec 1 H)
